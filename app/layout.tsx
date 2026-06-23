@@ -1,43 +1,34 @@
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const roboto = Roboto({
+  weight: ['400', '500', '700', '900'],
+  variable: '--font-roboto',
   subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
-  title: 'Yesika Roa - Full Stack Developer',
-  description: 'Ingeniera de Sistemas y Desarrolladora Full-Stack especializada en JavaScript/TypeScript, React, Node.js y soluciones de IA.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: 'Yesika Roa | Full Stack Developer',
+  description:
+    'Ingeniera de Sistemas y Desarrolladora Full-Stack especializada en JavaScript/TypeScript, React, Node.js y soluciones de IA.',
+  keywords:
+    'Yesika Roa,Full Stack Developer,Ingeniera de Sistemas,TypeScript,React,Node.js,PostgreSQL,AWS',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Yesika Roa | Full Stack Developer',
+    description:
+      'Ingeniera de Sistemas y Desarrolladora Full-Stack especializada en JavaScript/TypeScript, React, Node.js y soluciones de IA.',
+    url: 'https://yesikaroa.github.io',
+    siteName: 'Yesika Roa',
+    locale: 'es_VE',
+    type: 'website',
   },
 }
 
 export const viewport: Viewport = {
   colorScheme: 'dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#1f1f2e' },
-    { media: '(prefers-color-scheme: dark)', color: '#1f1f2e' },
-  ],
+  themeColor: '#0d0b14',
 }
 
 export default function RootLayout({
@@ -46,11 +37,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} dark`}>
-      <body className="font-sans antialiased bg-background text-foreground">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
+    <html lang="es" className={roboto.variable} suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   )
 }
