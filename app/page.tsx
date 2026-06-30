@@ -356,38 +356,31 @@ export default function Page() {
       <div className="site-shell">
         {/* ── Header ── */}
         <header className="site-header">
-          <nav className="site-nav" aria-label="Principal" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <nav className="site-nav" aria-label="Principal">
             <a className="brand" href="/" onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>
               <span className="brand-mark"><IconOrbit /></span>
               <span>Yesika Roa</span>
             </a>
-            {/* Nav links */}
-            <div className="nav-links">
-              {(['home', 'projects', 'about'] as const).map((tab) => (
-                <button
-                  key={tab}
-                  id={`nav-${tab}`}
-                  onClick={() => setActiveTab(tab)}
-                  className={`nav-link${activeTab === tab ? ' active' : ''}`}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
-                >
-                  {t.nav[tab]}
-                </button>
-              ))}
+
+            <div className="nav-center">
+              <div className="nav-links">
+                {(['home', 'projects', 'about'] as const).map((tab) => (
+                  <button
+                    key={tab}
+                    id={`nav-${tab}`}
+                    onClick={() => setActiveTab(tab)}
+                    className={`nav-link${activeTab === tab ? ' active' : ''}`}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
+                  >
+                    {t.nav[tab]}
+                  </button>
+                ))}
+              </div>
             </div>
-            {/* Language Toggle – far right */}
+
             <button
               onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-              style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid var(--clr-border)',
-                color: 'var(--clr-text)',
-                borderRadius: 'var(--radius-sm)',
-                padding: '4px 10px',
-                cursor: 'pointer',
-                fontWeight: 600,
-                fontSize: '0.85rem'
-              }}
+              className="lang-toggle"
             >
               {lang.toUpperCase()}
             </button>
@@ -684,28 +677,6 @@ export default function Page() {
                 href="https://github.com/YesikaRoa"
               >
                 <IconGithub size={18} />
-              </a>
-              <a
-                id="footer-cv-es"
-                target="_blank" rel="noreferrer"
-                className="footer-icon-link"
-                aria-label="Curriculum Vitae (ES)"
-                href="/CV_Yesika_Roa.pdf"
-                style={{ width: 'auto', padding: '0 12px', gap: '6px' }}
-              >
-                <span style={{ fontSize: '11px', fontWeight: 800 }}>CV ES</span>
-                <IconFileText size={16} />
-              </a>
-              <a
-                id="footer-cv-en"
-                target="_blank" rel="noreferrer"
-                className="footer-icon-link"
-                aria-label="Curriculum Vitae (EN)"
-                href="/CV_Yesika_Roa_English.pdf"
-                style={{ width: 'auto', padding: '0 12px', gap: '6px' }}
-              >
-                <span style={{ fontSize: '11px', fontWeight: 800 }}>CV EN</span>
-                <IconFileText size={16} />
               </a>
               <a
                 id="footer-email"
