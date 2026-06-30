@@ -14,7 +14,7 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 'use client';
 ;
 ;
-// ── Data ─────────────────────────────────────────────────────────────────────
+// ── Data & Translations ──────────────────────────────────────────────────────
 const techStack = [
     {
         icon: '{ }',
@@ -26,7 +26,11 @@ const techStack = [
     },
     {
         icon: '⚛',
-        label: 'React'
+        label: 'React.js'
+    },
+    {
+        icon: '▲',
+        label: 'Next.js'
     },
     {
         icon: '⬡',
@@ -38,119 +42,404 @@ const techStack = [
     },
     {
         icon: '▲',
-        label: 'Next.js'
+        label: 'Prisma ORM'
     },
     {
         icon: '☁',
         label: 'AWS'
     },
     {
-        icon: '🔴',
-        label: 'Redis'
-    },
-    {
         icon: '🤖',
-        label: 'Claude AI'
+        label: 'IA (Claude, Gemini, Groq)'
     },
     {
-        icon: '🐳',
-        label: 'Docker'
+        icon: '🔄',
+        label: 'n8n'
     }
 ];
-const projects = [
-    {
-        id: 1,
-        title: 'MediPanel',
-        tag: 'Healthcare Management',
-        description: 'Plataforma integral de gestión médica con Node.js, Express y PostgreSQL con caché en Redis Cloud.',
-        url: 'https://medipanel.netlify.app',
-        emoji: '🏥',
-        technologies: [
-            'React',
-            'Node.js',
-            'PostgreSQL',
-            'Redis'
-        ]
+const translations = {
+    es: {
+        nav: {
+            home: 'Inicio',
+            projects: 'Proyectos',
+            about: 'Sobre mí'
+        },
+        hero: {
+            eyebrow: 'Ingeniera de Sistemas  ||  Full Stack Developer',
+            greeting: 'Hey, ',
+            name: 'Yesika',
+            here: ' aquí 👋.',
+            headline: 'Convierto conceptos en productos.',
+            description: 'Desarrollo soluciones full stack de concepto a producción, combinando arquitectura robusta, entrega clara y sistemas que permanecen confiables bajo presión real.',
+            techStack: 'Tech stack',
+            linkedinTitle: 'LinkedIn',
+            linkedinDesc: 'Experiencia, resultados y contexto de liderazgo.',
+            githubTitle: 'GitHub',
+            githubDesc: 'Código de producción, arquitectura y experimentos técnicos.',
+            cvTitle: 'Curriculum Vitae',
+            cvDesc: 'Seleccionar idioma para descargar.',
+            emailTitle: 'Email'
+        },
+        projectsData: [
+            {
+                id: 1,
+                title: 'MediPanel',
+                tag: 'Healthcare Management',
+                description: 'Dashboard clínico avanzado con módulos para gestión de pacientes, profesionales de salud, citas médicas y expedientes electrónicos (EMR). Construido sobre CoreUI & React con backend en Node.js, Express y PostgreSQL.',
+                url: 'https://medipanel.netlify.app',
+                emoji: '🏥',
+                technologies: [
+                    'React',
+                    'CoreUI',
+                    'Node.js',
+                    'Express',
+                    'PostgreSQL'
+                ]
+            },
+            {
+                id: 2,
+                title: 'Libertadores-CS',
+                tag: 'Community CMS',
+                description: 'CMS para comunidades con panel administrativo segmentado y control de acceso basado en roles. Backend con Prisma, Node.js, Express y caché Redis para publicaciones. Pruebas con Jest, Supertest y GitHub Actions.',
+                url: 'https://libertadores-cs.netlify.app',
+                emoji: '🏘',
+                technologies: [
+                    'React',
+                    'CoreUI',
+                    'Node.js',
+                    'Prisma',
+                    'PostgreSQL',
+                    'Redis',
+                    'Jest'
+                ]
+            },
+            {
+                id: 3,
+                title: 'Kindred Pet Care',
+                tag: 'Pet Care Platform',
+                description: 'Plataforma web para veterinaria con módulo de adopción y contacto. Desarrollada en Next.js, React y Tailwind CSS con chatbot inteligente conectado a Google Gemini vía Google AI Studio API.',
+                url: 'https://kindredpetcare.netlify.app',
+                emoji: '🐾',
+                technologies: [
+                    'Next.js',
+                    'React',
+                    'TypeScript',
+                    'Tailwind CSS',
+                    'Google Gemini'
+                ]
+            },
+            {
+                id: 4,
+                title: 'Smart Agent',
+                tag: 'AI Support System',
+                description: 'Agente de Soporte Técnico con IA que automatiza la creación de tickets mediante flujos orquestados (n8n). Backend con arquitectura MVC, capa de servicios, Prisma ORM y PostgreSQL.',
+                url: 'https://smart-agentt.netlify.app',
+                emoji: '🤖',
+                technologies: [
+                    'TypeScript',
+                    'Node.js',
+                    'Express',
+                    'Prisma',
+                    'PostgreSQL',
+                    'n8n',
+                    'Groq LLM'
+                ]
+            }
+        ],
+        projectsSection: {
+            eyebrow: 'Proyectos',
+            title: 'Trabajo destacado.',
+            description: 'Sistemas de producción construidos para manejar complejidad y entregar resultados medibles.'
+        },
+        aboutSection: {
+            role: 'Full Stack Developer',
+            title: 'Esta soy yo.',
+            p1: 'Desarrollo productos tecnológicos enfocados en solucionar problemas reales. Mi prioridad es diseñar arquitecturas progresivas: código limpio y mantenible, sistemas altamente escalables y decisiones técnicas que perduren en el tiempo.',
+            p2: 'Si quieres conversar sobre el desarrollo de un producto, un desafío de diseño de sistemas o una posible colaboración, enviarme un correo es la forma más rápida de contactarme.',
+            likesTitle: 'Lo que me gusta',
+            likesDesc: 'Transformar requisitos complejos en sistemas de productos claros y fiables, asegurando una arquitectura escalable y un código mantenible.',
+            workTitle: 'Cómo trabajo',
+            workDesc: 'Comunicación directa, compromisos prácticos y altos estándares técnicos. Colaboro mediante metodologías ágiles y me apoyo en la Inteligencia Artificial para potenciar la productividad.',
+            contactTitle: '¿Dónde puedo contactarte?',
+            contactDesc: 'El correo electrónico es el canal más rápido para debatir sobre un producto o colaborar en proyectos.',
+            contactBtnTitle: 'Envíame un correo electrónico',
+            contactBtnDesc: 'Abrir ventana emergente de Gmail',
+            cvTitle: 'CV',
+            cvBtnTitle: 'Descargar Curriculum Vitae',
+            cvBtnDesc: 'Ver historial completo de roles y proyectos'
+        },
+        skillsData: {
+            Frontend: [
+                'JavaScript (ES6+)',
+                'TypeScript',
+                'React.js',
+                'Next.js',
+                'HTML5',
+                'CSS3',
+                'Tailwind CSS',
+                'CoreUI'
+            ],
+            'Backend & Orquestación': [
+                'Node.js',
+                'Express',
+                'Cloudflare Workers',
+                'n8n (Automatización de flujos)',
+                'Prisma ORM',
+                'Swagger',
+                'Redis Cloud',
+                'Cloudinary'
+            ],
+            'Bases de Datos': [
+                'PostgreSQL',
+                'Neon DB',
+                'MySQL',
+                'MongoDB',
+                'TablePlus',
+                'dbdiagram.io',
+                'DBeaver',
+                'dbgin'
+            ],
+            'Cloud & DevOps': [
+                'AWS (EC2, S3, RDS, Lambda, CloudWatch)',
+                'GitHub Actions',
+                'Docker',
+                'Git',
+                'VirtualBox (Kali Linux)'
+            ],
+            'IA & Herramientas': [
+                'Cursor AI',
+                'lovabled.dev',
+                'Google AI Studio API',
+                'Claude',
+                'Groq LLM',
+                'v0 by Vercel',
+                'Prompt Engineering',
+                'Antigravity',
+                'Visual Studio Code',
+                'Codex',
+                'Insomnia',
+                'Postman',
+                'Jest',
+                'Vitest'
+            ],
+            Gestión: [
+                'SCRUM',
+                'Jira',
+                'Confluence',
+                'Trello',
+                'Slack'
+            ]
+        },
+        skillsSection: {
+            title: 'Habilidades Técnicas'
+        },
+        educationSection: {
+            title: 'Educación',
+            degree: 'Ingeniería de Sistemas (2021 – 2026)'
+        },
+        footer: {
+            note: 'Ingeniera de Sistemas y Desarrolladora Full-Stack especializada en soluciones de software escalables.'
+        },
+        modal: {
+            title: 'Descargar Curriculum Vitae',
+            desc: 'Por favor selecciona el idioma de tu preferencia.',
+            esTitle: 'Español (ES)',
+            esDesc: 'Descargar CV en Español',
+            enTitle: 'English (EN)',
+            enDesc: 'Download Resume in English'
+        }
     },
-    {
-        id: 2,
-        title: 'Libertadores-CS',
-        tag: 'Community Management',
-        description: 'Panel administrativo comunitario con flujos de CI/CD en GitHub Actions e integración de Cloudinary.',
-        url: 'https://libertadores-cs.netlify.app',
-        emoji: '🏘',
-        technologies: [
-            'React',
-            'Express',
-            'GitHub Actions',
-            'Cloudinary'
-        ]
-    },
-    {
-        id: 3,
-        title: 'Kindred Pet Care',
-        tag: 'Pet Care Platform',
-        description: 'Aplicación moderna para el cuidado de mascotas con interfaz intuitiva y gestión de servicios.',
-        url: 'https://kindredpetcare.netlify.app',
-        emoji: '🐾',
-        technologies: [
-            'React',
-            'Tailwind CSS',
-            'Node.js',
-            'Firebase'
-        ]
-    },
-    {
-        id: 4,
-        title: 'AI-Assisted Workflows',
-        tag: 'Future Project',
-        description: 'Sistema de flujos de trabajo asistidos por IA para optimización de procesos de ingeniería.',
-        url: '#',
-        emoji: '🤖',
-        status: 'En Progreso',
-        technologies: [
-            'AI/ML',
-            'TypeScript',
-            'Claude API'
-        ]
+    en: {
+        nav: {
+            home: 'Home',
+            projects: 'Projects',
+            about: 'About me'
+        },
+        hero: {
+            eyebrow: 'Systems Engineer  ||  Full Stack Developer',
+            greeting: 'Hey, ',
+            name: 'Yesika',
+            here: ' here 👋.',
+            headline: 'I turn concepts into products.',
+            description: 'I build full-stack solutions from concept to production, combining robust architecture, clear delivery, and systems that remain reliable under real pressure.',
+            techStack: 'Tech stack',
+            linkedinTitle: 'LinkedIn',
+            linkedinDesc: 'Experience, results, and leadership context.',
+            githubTitle: 'GitHub',
+            githubDesc: 'Production code, architecture, and technical experiments.',
+            cvTitle: 'Curriculum Vitae',
+            cvDesc: 'Select language to download.',
+            emailTitle: 'Email'
+        },
+        projectsData: [
+            {
+                id: 1,
+                title: 'MediPanel',
+                tag: 'Healthcare Management',
+                description: 'Advanced clinical dashboard with modules for patient management, health professionals, medical appointments, and electronic medical records (EMR). Built on CoreUI & React with a Node.js, Express, and PostgreSQL backend.',
+                url: 'https://medipanel.netlify.app',
+                emoji: '🏥',
+                technologies: [
+                    'React',
+                    'CoreUI',
+                    'Node.js',
+                    'Express',
+                    'PostgreSQL'
+                ]
+            },
+            {
+                id: 2,
+                title: 'Libertadores-CS',
+                tag: 'Community CMS',
+                description: 'Community CMS with segmented administrative panel and role-based access control. Backend with Prisma, Node.js, Express, and Redis cache for posts. Tested with Jest, Supertest, and GitHub Actions.',
+                url: 'https://libertadores-cs.netlify.app',
+                emoji: '🏘',
+                technologies: [
+                    'React',
+                    'CoreUI',
+                    'Node.js',
+                    'Prisma',
+                    'PostgreSQL',
+                    'Redis',
+                    'Jest'
+                ]
+            },
+            {
+                id: 3,
+                title: 'Kindred Pet Care',
+                tag: 'Pet Care Platform',
+                description: 'Veterinary web platform with adoption and contact modules. Developed in Next.js, React, and Tailwind CSS with an intelligent chatbot connected to Google Gemini via Google AI Studio API.',
+                url: 'https://kindredpetcare.netlify.app',
+                emoji: '🐾',
+                technologies: [
+                    'Next.js',
+                    'React',
+                    'TypeScript',
+                    'Tailwind CSS',
+                    'Google Gemini'
+                ]
+            },
+            {
+                id: 4,
+                title: 'Smart Agent',
+                tag: 'AI Support System',
+                description: 'AI Tech Support Agent that automates ticket creation via orchestrated flows (n8n). MVC architecture backend, services layer, Prisma ORM, and PostgreSQL.',
+                url: 'https://smart-agentt.netlify.app',
+                emoji: '🤖',
+                technologies: [
+                    'TypeScript',
+                    'Node.js',
+                    'Express',
+                    'Prisma',
+                    'PostgreSQL',
+                    'n8n',
+                    'Groq LLM'
+                ]
+            }
+        ],
+        projectsSection: {
+            eyebrow: 'Projects',
+            title: 'Featured work.',
+            description: 'Production systems built to handle complexity and deliver measurable results.'
+        },
+        aboutSection: {
+            role: 'Full Stack Developer',
+            title: 'This is me.',
+            p1: 'I develop technological products focused on solving real problems. My priority is designing progressive architectures: clean and maintainable code, highly scalable systems, and technical decisions that endure over time.',
+            p2: 'If you want to discuss product development, a systems design challenge, or a possible collaboration, sending me an email is the fastest way to reach me.',
+            likesTitle: 'What I like',
+            likesDesc: 'Transforming complex requirements into clear, reliable product systems, ensuring scalable architecture and maintainable code.',
+            workTitle: 'How I work',
+            workDesc: 'Direct communication, practical commitments, and high technical standards. I collaborate using agile methodologies and leverage Artificial Intelligence to boost productivity.',
+            contactTitle: 'Where to reach me?',
+            contactDesc: 'Email is the fastest channel to discuss a product or collaborate on projects.',
+            contactBtnTitle: 'Send me an email',
+            contactBtnDesc: 'Open Gmail compose popup',
+            cvTitle: 'CV',
+            cvBtnTitle: 'Download Curriculum Vitae',
+            cvBtnDesc: 'View full history of roles and projects'
+        },
+        skillsData: {
+            Frontend: [
+                'JavaScript (ES6+)',
+                'TypeScript',
+                'React.js',
+                'Next.js',
+                'HTML5',
+                'CSS3',
+                'Tailwind CSS',
+                'CoreUI'
+            ],
+            'Backend & Orchestration': [
+                'Node.js',
+                'Express',
+                'Cloudflare Workers',
+                'n8n (Flow Automation)',
+                'Prisma ORM',
+                'Swagger',
+                'Redis Cloud',
+                'Cloudinary'
+            ],
+            'Databases': [
+                'PostgreSQL',
+                'Neon DB',
+                'MySQL',
+                'MongoDB',
+                'TablePlus',
+                'dbdiagram.io',
+                'DBeaver',
+                'dbgin'
+            ],
+            'Cloud & DevOps': [
+                'AWS (EC2, S3, RDS, Lambda, CloudWatch)',
+                'GitHub Actions',
+                'Docker',
+                'Git',
+                'VirtualBox (Kali Linux)'
+            ],
+            'AI & Tools': [
+                'Cursor AI',
+                'lovabled.dev',
+                'Google AI Studio API',
+                'Claude',
+                'Groq LLM',
+                'v0 by Vercel',
+                'Prompt Engineering',
+                'Antigravity',
+                'Visual Studio Code',
+                'Codex',
+                'Insomnia',
+                'Postman',
+                'Jest',
+                'Vitest'
+            ],
+            Management: [
+                'SCRUM',
+                'Jira',
+                'Confluence',
+                'Trello',
+                'Slack'
+            ]
+        },
+        skillsSection: {
+            title: 'Technical Skills'
+        },
+        educationSection: {
+            title: 'Education',
+            degree: 'Systems Engineering (2021 – 2026)'
+        },
+        footer: {
+            note: 'Systems Engineer and Full-Stack Developer specialized in scalable software solutions.'
+        },
+        modal: {
+            title: 'Download Curriculum Vitae',
+            desc: 'Please select your preferred language.',
+            esTitle: 'Spanish (ES)',
+            esDesc: 'Download CV in Spanish',
+            enTitle: 'English (EN)',
+            enDesc: 'Download Resume in English'
+        }
     }
-];
-const skills = {
-    Frontend: [
-        'JavaScript (ES6+)',
-        'TypeScript',
-        'React.js',
-        'HTML5',
-        'CSS3',
-        'Tailwind CSS',
-        'CoreUI'
-    ],
-    Backend: [
-        'Node.js',
-        'Express',
-        'Prisma ORM',
-        'Swagger',
-        'Redis Cloud',
-        'Cloudinary'
-    ],
-    Databases: [
-        'PostgreSQL',
-        'MySQL',
-        'MongoDB'
-    ],
-    'Cloud & DevOps': [
-        'AWS (EC2, S3, RDS)',
-        'GitHub Actions',
-        'Docker',
-        'Git'
-    ],
-    Herramientas: [
-        'Cursor AI',
-        'Claude',
-        'v0 by Vercel',
-        'Jira',
-        'Confluence'
-    ]
 };
 // ── SVG Icons ────────────────────────────────────────────────────────────────
 function IconOrbit() {
@@ -170,14 +459,14 @@ function IconOrbit() {
                 d: "M20.341 6.484A10 10 0 0 1 10.266 21.85"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 80,
+                lineNumber: 249,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M3.659 17.516A10 10 0 0 1 13.74 2.152"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 81,
+                lineNumber: 250,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -186,7 +475,7 @@ function IconOrbit() {
                 r: "3"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 82,
+                lineNumber: 251,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -195,7 +484,7 @@ function IconOrbit() {
                 r: "2"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 83,
+                lineNumber: 252,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -204,13 +493,13 @@ function IconOrbit() {
                 r: "2"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 84,
+                lineNumber: 253,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 77,
+        lineNumber: 246,
         columnNumber: 5
     }, this);
 }
@@ -233,7 +522,7 @@ function IconLinkedIn({ size = 20, className }) {
                 d: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 94,
+                lineNumber: 263,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -243,7 +532,7 @@ function IconLinkedIn({ size = 20, className }) {
                 y: "9"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 95,
+                lineNumber: 264,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -252,13 +541,13 @@ function IconLinkedIn({ size = 20, className }) {
                 r: "2"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 96,
+                lineNumber: 265,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 91,
+        lineNumber: 260,
         columnNumber: 5
     }, this);
 }
@@ -281,20 +570,20 @@ function IconGithub({ size = 20, className }) {
                 d: "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 106,
+                lineNumber: 275,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M9 18c-4.51 2-5-2-7-2"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 107,
+                lineNumber: 276,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 103,
+        lineNumber: 272,
         columnNumber: 5
     }, this);
 }
@@ -317,41 +606,41 @@ function IconFileText({ size = 20, className }) {
                 d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 117,
+                lineNumber: 286,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M14 2v4a2 2 0 0 0 2 2h4"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 118,
+                lineNumber: 287,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M10 9H8"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 119,
+                lineNumber: 288,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M16 13H8"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 120,
+                lineNumber: 289,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M16 17H8"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 121,
+                lineNumber: 290,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 114,
+        lineNumber: 283,
         columnNumber: 5
     }, this);
 }
@@ -374,7 +663,7 @@ function IconMail({ size = 20, className }) {
                 d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 131,
+                lineNumber: 300,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -385,13 +674,13 @@ function IconMail({ size = 20, className }) {
                 rx: "2"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 132,
+                lineNumber: 301,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 128,
+        lineNumber: 297,
         columnNumber: 5
     }, this);
 }
@@ -432,7 +721,7 @@ function AnimateIn({ children, delay = 0, className = '' }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 159,
+        lineNumber: 328,
         columnNumber: 5
     }, this);
 }
@@ -441,6 +730,9 @@ _c5 = AnimateIn;
 function Page() {
     _s1();
     const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('home');
+    const [showCvModal, setShowCvModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [lang, setLang] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('es');
+    const t = translations[lang];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -448,7 +740,7 @@ function Page() {
                 "aria-hidden": "true"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 181,
+                lineNumber: 354,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -459,35 +751,43 @@ function Page() {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                             className: "site-nav",
                             "aria-label": "Principal",
+                            style: {
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between'
+                            },
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     className: "brand",
                                     href: "/",
-                                    onClick: ()=>setActiveTab('home'),
+                                    onClick: (e)=>{
+                                        e.preventDefault();
+                                        setActiveTab('home');
+                                    },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "brand-mark",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconOrbit, {}, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 188,
+                                                lineNumber: 361,
                                                 columnNumber: 44
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 188,
+                                            lineNumber: 361,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "Yesika Roa"
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 362,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 360,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -506,26 +806,44 @@ function Page() {
                                                 cursor: 'pointer',
                                                 fontFamily: 'inherit'
                                             },
-                                            children: tab === 'home' ? 'Home' : tab === 'projects' ? 'Projects' : 'About'
+                                            children: t.nav[tab]
                                         }, tab, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 193,
+                                            lineNumber: 367,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 191,
+                                    lineNumber: 365,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setLang(lang === 'es' ? 'en' : 'es'),
+                                    style: {
+                                        background: 'rgba(255,255,255,0.05)',
+                                        border: '1px solid var(--clr-border)',
+                                        color: 'var(--clr-text)',
+                                        borderRadius: 'var(--radius-sm)',
+                                        padding: '4px 10px',
+                                        cursor: 'pointer',
+                                        fontWeight: 600,
+                                        fontSize: '0.85rem'
+                                    },
+                                    children: lang.toUpperCase()
+                                }, void 0, false, {
+                                    fileName: "[project]/app/page.tsx",
+                                    lineNumber: 379,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 186,
+                            lineNumber: 359,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 185,
+                        lineNumber: 358,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -540,47 +858,47 @@ function Page() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "eyebrow",
-                                                children: "Ingeniera de Sistemas  ||  Full Stack Developer"
+                                                children: t.hero.eyebrow
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 214,
+                                                lineNumber: 404,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                                 children: [
-                                                    "Hey, ",
+                                                    t.hero.greeting,
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "hero-highlight",
-                                                        children: "Yesika"
+                                                        children: t.hero.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 216,
-                                                        columnNumber: 24
+                                                        lineNumber: 406,
+                                                        columnNumber: 36
                                                     }, this),
-                                                    " aquí 👋.",
+                                                    t.hero.here,
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 216,
-                                                        columnNumber: 79
+                                                        lineNumber: 406,
+                                                        columnNumber: 102
                                                     }, this),
-                                                    "Convierto conceptos en productos."
+                                                    t.hero.headline
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 215,
+                                                lineNumber: 405,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                children: "Desarrollo soluciones full stack de concepto a producción, combinando arquitectura robusta, entrega clara y sistemas que permanecen confiables bajo presión real."
+                                                children: t.hero.description
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 219,
+                                                lineNumber: 409,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 213,
+                                        lineNumber: 403,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -593,10 +911,10 @@ function Page() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "stack-title",
-                                                        children: "Tech stack"
+                                                        children: t.hero.techStack
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 229,
+                                                        lineNumber: 418,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -612,25 +930,25 @@ function Page() {
                                                                         children: icon
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 233,
+                                                                        lineNumber: 422,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     label
                                                                 ]
                                                             }, label, true, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 232,
+                                                                lineNumber: 421,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 230,
+                                                        lineNumber: 419,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 228,
+                                                lineNumber: 417,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -646,36 +964,36 @@ function Page() {
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                        children: "LinkedIn"
+                                                                        children: t.hero.linkedinTitle
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 250,
+                                                                        lineNumber: 439,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        children: "Experiencia, resultados y contexto de liderazgo."
+                                                                        children: t.hero.linkedinDesc
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 251,
+                                                                        lineNumber: 440,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 249,
+                                                                lineNumber: 438,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconLinkedIn, {
                                                                 size: 22
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 253,
+                                                                lineNumber: 442,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 242,
+                                                        lineNumber: 431,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -688,65 +1006,70 @@ function Page() {
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                        children: "GitHub"
+                                                                        children: t.hero.githubTitle
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 264,
+                                                                        lineNumber: 453,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        children: "Código de producción, arquitectura y experimentos técnicos."
+                                                                        children: t.hero.githubDesc
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 265,
+                                                                        lineNumber: 454,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 263,
+                                                                lineNumber: 452,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconGithub, {
                                                                 size: 22
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 267,
+                                                                lineNumber: 456,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 256,
+                                                        lineNumber: 445,
                                                         columnNumber: 19
                                                     }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                         id: "link-cv",
-                                                        target: "_blank",
-                                                        rel: "noreferrer",
                                                         className: "social-link social-link-resume",
-                                                        href: "/CV_Yesika_Roa.pdf",
+                                                        onClick: ()=>setShowCvModal(true),
+                                                        style: {
+                                                            background: 'linear-gradient(135deg, rgba(138,92,246,0.12), rgba(109,40,217,0.08))',
+                                                            border: '1px solid rgba(138,92,246,0.35)',
+                                                            cursor: 'pointer',
+                                                            textAlign: 'left',
+                                                            fontFamily: 'inherit'
+                                                        },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                        children: "Curriculum Vitae"
+                                                                        children: t.hero.cvTitle
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 278,
+                                                                        lineNumber: 466,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        children: "Historial de roles, alcance técnico e impacto medible."
+                                                                        children: t.hero.cvDesc
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 279,
+                                                                        lineNumber: 467,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 277,
+                                                                lineNumber: 465,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconFileText, {
@@ -754,13 +1077,13 @@ function Page() {
                                                                 className: "social-link-icon social-link-icon-resume"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 281,
+                                                                lineNumber: 469,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 270,
+                                                        lineNumber: 459,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -771,54 +1094,54 @@ function Page() {
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                        children: "Email"
+                                                                        children: t.hero.emailTitle
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 290,
+                                                                        lineNumber: 478,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         children: "yroa1402@gmail.com"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 291,
+                                                                        lineNumber: 479,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 289,
+                                                                lineNumber: 477,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconMail, {
                                                                 size: 22
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 293,
+                                                                lineNumber: 481,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 284,
+                                                        lineNumber: 472,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 241,
+                                                lineNumber: 430,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 226,
+                                        lineNumber: 415,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 211,
+                                lineNumber: 401,
                                 columnNumber: 13
                             }, this),
                             activeTab === 'projects' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -836,38 +1159,39 @@ function Page() {
                                                     opacity: 1,
                                                     transform: 'none'
                                                 },
-                                                children: "Proyectos"
+                                                children: t.projectsSection.eyebrow
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 308,
+                                                lineNumber: 496,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                                 className: "section-title",
-                                                children: "Trabajo destacado."
+                                                children: t.projectsSection.title
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 311,
+                                                lineNumber: 499,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "section-copy",
-                                                children: "Sistemas de producción construidos para manejar complejidad y entregar resultados medibles."
+                                                children: t.projectsSection.description
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 312,
+                                                lineNumber: 500,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 307,
+                                        lineNumber: 495,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "projects-grid",
-                                        children: projects.map((p, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimateIn, {
+                                        children: t.projectsData.map((p, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimateIn, {
                                                 delay: i * 0.12,
+                                                className: "project-animate-wrap",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     id: `project-${p.id}`,
                                                     target: p.url !== '#' ? '_blank' : undefined,
@@ -887,45 +1211,24 @@ function Page() {
                                                                 style: {
                                                                     background: `linear-gradient(135deg, #4c1d95 0%, #2e1065 50%, #1e1b4b 100%)`
                                                                 },
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        style: {
-                                                                            fontSize: '3rem'
-                                                                        },
-                                                                        children: p.emoji
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 335,
-                                                                        columnNumber: 27
-                                                                    }, this),
-                                                                    p.status && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        style: {
-                                                                            position: 'absolute',
-                                                                            top: '12px',
-                                                                            right: '12px',
-                                                                            fontSize: '0.7rem',
-                                                                            fontWeight: 700,
-                                                                            padding: '4px 10px',
-                                                                            borderRadius: '999px',
-                                                                            background: 'rgba(138,92,246,0.2)',
-                                                                            border: '1px solid rgba(138,92,246,0.4)',
-                                                                            color: '#b38aff'
-                                                                        },
-                                                                        children: p.status
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 337,
-                                                                        columnNumber: 29
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    style: {
+                                                                        fontSize: '3rem'
+                                                                    },
+                                                                    children: p.emoji
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 523,
+                                                                    columnNumber: 27
+                                                                }, this)
+                                                            }, void 0, false, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 329,
+                                                                lineNumber: 517,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 328,
+                                                            lineNumber: 516,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -936,7 +1239,7 @@ function Page() {
                                                                     children: p.tag
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 351,
+                                                                    lineNumber: 527,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -946,7 +1249,7 @@ function Page() {
                                                                             children: p.title
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/page.tsx",
-                                                                            lineNumber: 353,
+                                                                            lineNumber: 529,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -955,20 +1258,20 @@ function Page() {
                                                                             children: "↗"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/page.tsx",
-                                                                            lineNumber: 354,
+                                                                            lineNumber: 530,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 352,
+                                                                    lineNumber: 528,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                     children: p.description
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 356,
+                                                                    lineNumber: 532,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -978,78 +1281,46 @@ function Page() {
                                                                             children: t
                                                                         }, t, false, {
                                                                             fileName: "[project]/app/page.tsx",
-                                                                            lineNumber: 359,
+                                                                            lineNumber: 535,
                                                                             columnNumber: 29
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 357,
+                                                                    lineNumber: 533,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 350,
+                                                            lineNumber: 526,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/page.tsx",
-                                                    lineNumber: 320,
+                                                    lineNumber: 508,
                                                     columnNumber: 21
                                                 }, this)
                                             }, p.id, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 319,
+                                                lineNumber: 507,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 317,
+                                        lineNumber: 505,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 302,
+                                lineNumber: 490,
                                 columnNumber: 13
                             }, this),
                             activeTab === 'about' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                                 className: "about-section panel",
                                 "aria-label": "Sobre mí",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimateIn, {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "eyebrow",
-                                                style: {
-                                                    animation: 'none',
-                                                    opacity: 1,
-                                                    transform: 'none'
-                                                },
-                                                children: "Sobre mí"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/page.tsx",
-                                                lineNumber: 374,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                className: "section-title",
-                                                style: {
-                                                    marginBottom: '2.5rem'
-                                                },
-                                                children: "Ingeniera y Desarrolladora."
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/page.tsx",
-                                                lineNumber: 377,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/page.tsx",
-                                        lineNumber: 373,
-                                        columnNumber: 15
-                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimateIn, {
                                         delay: 0.1,
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1067,7 +1338,7 @@ function Page() {
                                                             priority: true
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 386,
+                                                            lineNumber: 553,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1075,173 +1346,276 @@ function Page() {
                                                             children: "Yesika Roa"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 394,
+                                                            lineNumber: 561,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             className: "about-role",
-                                                            children: "Full Stack Developer"
+                                                            children: t.aboutSection.role
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 395,
+                                                            lineNumber: 562,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/page.tsx",
-                                                    lineNumber: 385,
+                                                    lineNumber: 552,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "about-content",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "about-block",
+                                                            style: {
+                                                                marginBottom: '3rem'
+                                                            },
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                                    children: "Perfil"
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                                    className: "section-title",
+                                                                    style: {
+                                                                        marginBottom: '1.25rem',
+                                                                        fontSize: '3rem'
+                                                                    },
+                                                                    children: t.aboutSection.title
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 401,
+                                                                    lineNumber: 568,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    children: "Ingeniera de Sistemas con más de 2 años desarrollando soluciones tecnológicas de alto impacto. Especializada en JavaScript/TypeScript con experiencia en arquitectura backend robusta con Node.js, PostgreSQL y AWS."
+                                                                    style: {
+                                                                        fontSize: '1rem',
+                                                                        color: 'var(--clr-text-muted)',
+                                                                        lineHeight: 1.7,
+                                                                        marginBottom: '1.25rem'
+                                                                    },
+                                                                    children: t.aboutSection.p1
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 402,
+                                                                    lineNumber: 571,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    style: {
+                                                                        fontSize: '1rem',
+                                                                        color: 'var(--clr-text-muted)',
+                                                                        lineHeight: 1.7
+                                                                    },
+                                                                    children: t.aboutSection.p2
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 574,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 400,
+                                                            lineNumber: 567,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "about-block",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                                    children: "Experiencia"
+                                                                    children: t.aboutSection.likesTitle
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 409,
+                                                                    lineNumber: 580,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    children: "Actualmente en Tobal Systems como Ingeniera de Software Full Stack. Anteriormente como Desarrolladora Independiente trabajando en proyectos de gestión médica, administración comunitaria y más."
+                                                                    children: t.aboutSection.likesDesc
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 410,
+                                                                    lineNumber: 581,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 408,
+                                                            lineNumber: 579,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "about-block",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                                    children: "Enfoque"
+                                                                    children: t.aboutSection.workTitle
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 417,
+                                                                    lineNumber: 587,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    children: "Especializada en resolución de problemas complejos mediante desarrollo colaborativo, metodologías ágiles (SCRUM) e integración estratégica de Inteligencia Artificial."
+                                                                    children: t.aboutSection.workDesc
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 418,
+                                                                    lineNumber: 588,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 416,
+                                                            lineNumber: 586,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "about-block",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                                    children: "CV"
+                                                                    children: t.aboutSection.contactTitle
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 424,
+                                                                    lineNumber: 594,
                                                                     columnNumber: 23
                                                                 }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    id: "about-cv-link",
-                                                                    href: "/CV_Yesika_Roa.pdf",
-                                                                    target: "_blank",
-                                                                    rel: "noreferrer",
-                                                                    className: "social-link social-link-resume",
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    style: {
+                                                                        marginBottom: '1rem'
+                                                                    },
+                                                                    children: t.aboutSection.contactDesc
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 595,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                    onClick: ()=>window.open('https://mail.google.com/mail/?view=cm&fs=1&to=yroa1402@gmail.com', 'gmail-compose', 'width=800,height=600'),
+                                                                    className: "social-link",
                                                                     style: {
                                                                         display: 'inline-flex',
                                                                         width: 'fit-content',
-                                                                        minWidth: '260px'
+                                                                        padding: '0.6rem 1rem',
+                                                                        background: 'transparent',
+                                                                        border: '1px solid var(--clr-border)',
+                                                                        cursor: 'pointer',
+                                                                        textAlign: 'left',
+                                                                        fontFamily: 'inherit'
                                                                     },
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             children: [
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    children: "Descargar Curriculum Vitae"
+                                                                                    children: t.aboutSection.contactBtnTitle
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/page.tsx",
-                                                                                    lineNumber: 434,
+                                                                                    lineNumber: 604,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                    children: "Ver historial completo de roles y proyectos"
+                                                                                    children: t.aboutSection.contactBtnDesc
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/page.tsx",
-                                                                                    lineNumber: 435,
+                                                                                    lineNumber: 605,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/page.tsx",
-                                                                            lineNumber: 433,
+                                                                            lineNumber: 603,
+                                                                            columnNumber: 25
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconMail, {
+                                                                            size: 20
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/page.tsx",
+                                                                            lineNumber: 607,
+                                                                            columnNumber: 25
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 598,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 593,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "about-block",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                    children: t.aboutSection.cvTitle
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 612,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                    id: "about-cv-link",
+                                                                    className: "social-link social-link-resume",
+                                                                    onClick: ()=>setShowCvModal(true),
+                                                                    style: {
+                                                                        display: 'inline-flex',
+                                                                        width: 'fit-content',
+                                                                        minWidth: '260px',
+                                                                        background: 'linear-gradient(135deg, rgba(138,92,246,0.12), rgba(109,40,217,0.08))',
+                                                                        border: '1px solid rgba(138,92,246,0.35)',
+                                                                        cursor: 'pointer',
+                                                                        textAlign: 'left',
+                                                                        fontFamily: 'inherit'
+                                                                    },
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    children: t.aboutSection.cvBtnTitle
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/page.tsx",
+                                                                                    lineNumber: 620,
+                                                                                    columnNumber: 27
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    children: t.aboutSection.cvBtnDesc
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/page.tsx",
+                                                                                    lineNumber: 621,
+                                                                                    columnNumber: 27
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/app/page.tsx",
+                                                                            lineNumber: 619,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconFileText, {
                                                                             size: 20
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/page.tsx",
-                                                                            lineNumber: 437,
+                                                                            lineNumber: 623,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/page.tsx",
-                                                                    lineNumber: 425,
+                                                                    lineNumber: 613,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/page.tsx",
-                                                            lineNumber: 423,
+                                                            lineNumber: 611,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/page.tsx",
-                                                    lineNumber: 399,
+                                                    lineNumber: 566,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 383,
+                                            lineNumber: 550,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 382,
+                                        lineNumber: 549,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimateIn, {
@@ -1254,22 +1628,22 @@ function Page() {
                                                     marginBottom: '1.25rem',
                                                     letterSpacing: '-0.02em'
                                                 },
-                                                children: "Habilidades Técnicas"
+                                                children: t.skillsSection.title
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 446,
+                                                lineNumber: 632,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "skills-grid",
-                                                children: Object.entries(skills).map(([cat, items])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: Object.entries(t.skillsData).map(([cat, items])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "skill-card",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                                 children: cat
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 452,
+                                                                lineNumber: 638,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1279,29 +1653,29 @@ function Page() {
                                                                         children: s
                                                                     }, s, false, {
                                                                         fileName: "[project]/app/page.tsx",
-                                                                        lineNumber: 455,
+                                                                        lineNumber: 641,
                                                                         columnNumber: 27
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/page.tsx",
-                                                                lineNumber: 453,
+                                                                lineNumber: 639,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, cat, true, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 451,
+                                                        lineNumber: 637,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 449,
+                                                lineNumber: 635,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 445,
+                                        lineNumber: 631,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimateIn, {
@@ -1314,10 +1688,10 @@ function Page() {
                                                     marginBottom: '1.25rem',
                                                     letterSpacing: '-0.02em'
                                                 },
-                                                children: "Educación"
+                                                children: t.educationSection.title
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 465,
+                                                lineNumber: 651,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1327,38 +1701,38 @@ function Page() {
                                                         children: "UNEFA – San Cristóbal, Venezuela"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 469,
+                                                        lineNumber: 655,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        children: "Ingeniería de Sistemas (2021 – 2026, en curso)"
+                                                        children: t.educationSection.degree
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/page.tsx",
-                                                        lineNumber: 470,
+                                                        lineNumber: 656,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 468,
+                                                lineNumber: 654,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 464,
+                                        lineNumber: 650,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 372,
+                                lineNumber: 548,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 207,
+                        lineNumber: 397,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -1368,10 +1742,10 @@ function Page() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "footer-note",
-                                    children: "Ingeniera de Sistemas y Desarrolladora Full-Stack especializada en soluciones de software escalables."
+                                    children: t.footer.note
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 480,
+                                    lineNumber: 666,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1388,12 +1762,12 @@ function Page() {
                                                 size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 491,
+                                                lineNumber: 677,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 484,
+                                            lineNumber: 670,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1407,31 +1781,86 @@ function Page() {
                                                 size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 500,
+                                                lineNumber: 686,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 493,
+                                            lineNumber: 679,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            id: "footer-cv",
+                                            id: "footer-cv-es",
                                             target: "_blank",
                                             rel: "noreferrer",
                                             className: "footer-icon-link",
-                                            "aria-label": "Curriculum Vitae",
+                                            "aria-label": "Curriculum Vitae (ES)",
                                             href: "/CV_Yesika_Roa.pdf",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconFileText, {
-                                                size: 18
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/page.tsx",
-                                                lineNumber: 509,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
+                                            style: {
+                                                width: 'auto',
+                                                padding: '0 12px',
+                                                gap: '6px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    style: {
+                                                        fontSize: '11px',
+                                                        fontWeight: 800
+                                                    },
+                                                    children: "CV ES"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 696,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconFileText, {
+                                                    size: 16
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 697,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 502,
+                                            lineNumber: 688,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            id: "footer-cv-en",
+                                            target: "_blank",
+                                            rel: "noreferrer",
+                                            className: "footer-icon-link",
+                                            "aria-label": "Curriculum Vitae (EN)",
+                                            href: "/CV_Yesika_Roa_English.pdf",
+                                            style: {
+                                                width: 'auto',
+                                                padding: '0 12px',
+                                                gap: '6px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    style: {
+                                                        fontSize: '11px',
+                                                        fontWeight: 800
+                                                    },
+                                                    children: "CV EN"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 707,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconFileText, {
+                                                    size: 16
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 708,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 699,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1443,41 +1872,184 @@ function Page() {
                                                 size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 517,
+                                                lineNumber: 716,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 511,
+                                            lineNumber: 710,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 483,
+                                    lineNumber: 669,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 479,
+                            lineNumber: 665,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 478,
+                        lineNumber: 664,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 183,
+                lineNumber: 356,
                 columnNumber: 7
+            }, this),
+            showCvModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "modal-overlay",
+                onClick: ()=>setShowCvModal(false),
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "modal-content",
+                    onClick: (e)=>e.stopPropagation(),
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "modal-close",
+                            onClick: ()=>setShowCvModal(false),
+                            "aria-label": "Cerrar modal",
+                            children: "✕"
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 727,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                            className: "modal-title",
+                            children: t.modal.title
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 730,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "modal-desc",
+                            children: t.modal.desc
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 731,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "modal-actions",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: "/CV_Yesika_Roa.pdf",
+                                    target: "_blank",
+                                    rel: "noreferrer",
+                                    className: "social-link social-link-resume",
+                                    style: {
+                                        textDecoration: 'none'
+                                    },
+                                    onClick: ()=>setShowCvModal(false),
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    children: t.modal.esTitle
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 742,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    children: t.modal.esDesc
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 743,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 741,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconFileText, {
+                                            size: 20
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 745,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/page.tsx",
+                                    lineNumber: 733,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: "/CV_Yesika_Roa_English.pdf",
+                                    target: "_blank",
+                                    rel: "noreferrer",
+                                    className: "social-link social-link-resume",
+                                    style: {
+                                        textDecoration: 'none'
+                                    },
+                                    onClick: ()=>setShowCvModal(false),
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    children: t.modal.enTitle
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 756,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    children: t.modal.enDesc
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 757,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 755,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconFileText, {
+                                            size: 20
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 759,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/page.tsx",
+                                    lineNumber: 747,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 732,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/app/page.tsx",
+                    lineNumber: 726,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 725,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true);
 }
-_s1(Page, "/uz5jQszu+N2c8KPqhTb9lQ295M=");
+_s1(Page, "BHmdAjkhB13stmW2Znmp4+tixK8=");
 _c6 = Page;
 var _c, _c1, _c2, _c3, _c4, _c5, _c6;
 __turbopack_context__.k.register(_c, "IconOrbit");
