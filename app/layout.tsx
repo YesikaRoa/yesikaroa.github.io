@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   keywords:
     'Yesika Roa,Full Stack Developer,Ingeniera de Sistemas,TypeScript,React,Node.js,PostgreSQL,AWS',
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'Yesika Roa | Full Stack Developer',
     description:

@@ -48,6 +48,10 @@ const metadata = {
     description: 'Ingeniera de Sistemas y Desarrolladora Full-Stack especializada en JavaScript/TypeScript, React, Node.js y soluciones de IA.',
     keywords: 'Yesika Roa,Full Stack Developer,Ingeniera de Sistemas,TypeScript,React,Node.js,PostgreSQL,AWS',
     robots: 'index, follow',
+    icons: {
+        icon: '/favicon.svg',
+        apple: '/favicon.png'
+    },
     openGraph: {
         title: 'Yesika Roa | Full Stack Developer',
         description: 'Ingeniera de Sistemas y Desarrolladora Full-Stack especializada en JavaScript/TypeScript, React, Node.js y soluciones de IA.',
@@ -71,12 +75,12 @@ function RootLayout({ children }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 41,
+            lineNumber: 45,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 40,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 }
